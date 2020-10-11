@@ -1,15 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Switch } from 'react-router-dom';
+import { HashRouter,BrowserRouter, Switch } from 'react-router-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 import APP from './app'
 ReactDOM.render(
+  <HashRouter basename='/'>
   <BrowserRouter>
     <Switch>
       <APP />
     </Switch>
-  </BrowserRouter>,
+  </BrowserRouter>
+  </HashRouter>
+  ,
   document.getElementById('root')
 );
 
